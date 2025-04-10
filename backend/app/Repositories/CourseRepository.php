@@ -25,7 +25,7 @@ class CourseRepository implements CourseRepositoryInterface
 
     public function getCourseDetails($id){
       
-      $courseDetaille = Course::findOrFail($id);
-      return $courseDetaille;
+      return  Course::where('id',$id)->first();
+     
     }
 }

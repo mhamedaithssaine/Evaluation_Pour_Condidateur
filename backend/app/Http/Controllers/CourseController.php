@@ -21,4 +21,14 @@ class CourseController extends Controller
         return response()->json($this->courseService->courseDetailes($id));
     }
 
+    public function subscribe(Request $request, $courseId) {
+        try {
+            $result = $this->courseService->subscribeToCourse($courseId, auth()->user());
+            return response()->json($result);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 400);
+        }
+    }
+    
+
 }

@@ -26,5 +26,14 @@ class CourseServices
     public function courseDetailes ($id) {
         return $this->courseRepo->getCourseDetails($id);
     }
+
+    public function subscribeToCourse($courseId, $user) {
+        if ($user->courses()->where('course_id', $courseId)->exists()) {
+            throw new \Exception("Deja inscrit a ce cours");
+        }
+    
+        $user->courses()->attach($courseId, ['progress' => 0]);
+        return ['message' => 'Inscription reussie'];
+    }
 }
 
