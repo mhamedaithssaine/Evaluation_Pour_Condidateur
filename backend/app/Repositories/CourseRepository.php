@@ -23,7 +23,7 @@ class CourseRepository implements CourseRepositoryInterface
     }
 
 
-    public function getCourseWithModules($id){
+    public function getCourseDetails($id){
       
       $courseDetaille = Course::findOrFail($id);
       return $courseDetaille;
