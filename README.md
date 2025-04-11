@@ -55,10 +55,3 @@ git clone https:https://github.com/mhamedaithssaine/Evaluation_Pour_Condidateur/
 
 
 
-
-Tailwind CSS : Accélère le développement du design tout en offrant une personnalisation facile.
-Netlify/Render : Plateformes gratuites et simples pour déployer respectivement le front-end et le back-end.
-Déploiement (optionnel)
-Front-end : Déployé sur Netlify à l'adresse https://votre-projet.netlify.app.
-Back-end : Déployé sur Render à l'adresse https://votre-projet.onrender.com.
-Instructions de déploiement dans docs/deployment.md.
